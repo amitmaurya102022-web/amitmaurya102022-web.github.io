@@ -1,12 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<title>My Website</title>
-<script src="https://3nbf6.com/act/files/tag.min.js?zoneId=1195130" data-cfasync="false" async></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download File - Continue</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f5f5f5;margin:0;padding:20px;text-align:center}
+.box{background:#fff;max-width:500px;margin:30px auto;padding:25px;border-radius:15px;box-shadow:0 5px 20px rgba(0,0,0,0.1)}
+h1{color:#222;font-size:22px}
+.btn{display:block;background:#2b78ff;color:#fff;padding:15px 20px;margin:15px 0;border-radius:10px;text-decoration:none;font-weight:bold;font-size:18px}
+.btn:hover{background:#1a5ed0}
+.step{background:#eef3ff;padding:10px;border-radius:8px;margin:10px 0;font-size:14px;color:#2b78ff;font-weight:bold}
+.timer{font-size:40px;color:#2b78ff;margin:20px 0}
+p{color:#666;font-size:14px}
+</style>
 </head>
 <body>
-<h1>Welcome to My Website</h1>
-<p>Site is working</p>
+
+<div class="box">
+<h1>Your File is Ready to Download ✅</h1>
+<p>Complete 3 easy steps to unlock your download link</p>
+
+<div class="step">STEP 1 of 3</div>
+<a class="btn" href="PASTE_YOUR_ADSTERRA_LINK_HERE" target="_blank" onclick="showStep2()">👉 Click to Continue</a>
+
+<div id="step2" style="display:none">
+<div class="step">STEP 2 of 3 - Almost Done!</div>
+<div class="timer" id="timer">5</div>
+<p>Please wait...</p>
+<a class="btn" id="btn2" href="PASTE_YOUR_ADSTERRA_LINK_HERE" target="_blank" style="display:none;background:#00c853" onclick="showStep3()">Continue to Final Step 🚀</a>
+</div>
+
+<div id="step3" style="display:none">
+<div class="step">STEP 3 of 3 - Final Step!</div>
+<a class="btn" href="PASTE_YOUR_ADSTERRA_LINK_HERE" target="_blank" style="background:#ff3d00">🔥 GET DOWNLOAD LINK NOW</a>
+<p style="margin-top:15px;color:#00c853;font-weight:bold">✅ After clicking, your download will start automatically</p>
+</div>
+
+<p style="margin-top:30px">© 2026 Secure Download Server</p>
+</div>
+
+<script>
+// Adsterra Popunder Code Yaha Paste Karna Hai
+// Example: <script src="...">
+
+function showStep2(){
+  document.getElementById('step2').style.display='block';
+  let count=5;
+  let timer=setInterval(()=>{
+    count--;
+    document.getElementById('timer').textContent=count;
+    if(count<=0){
+      clearInterval(timer);
+      document.getElementById('timer').style.display='none';
+      document.getElementById('btn2').style.display='block';
+    }
+  },1000);
+  window.scrollTo(0,document.body.scrollHeight);
+}
+function showStep3(){
+  document.getElementById('step3').style.display='block';
+  window.scrollTo(0,document.body.scrollHeight);
+}
+</script>
+
 </body>
 </html>
